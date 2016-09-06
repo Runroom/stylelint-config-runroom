@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-runroom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Runroom config for stylelint",
   "keywords": [
     "stylelint",
@@ -27,6 +27,9 @@
     "remark-preset-lint-consistent": "^1.0.0",
     "remark-preset-lint-recommended": "^1.0.0",
     "stylelint": "^7.2.0"
+  },
+  "dependencies": {
+    "stylelint-scss": "1.2.0"
   },
   "peerDependencies": {
     "stylelint": "^7.2.0"
