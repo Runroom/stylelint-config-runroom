@@ -98,16 +98,24 @@ Set your `stylelint` config to:
 
 ```json
 {
-  "extends": "stylelint-config-runroom"
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "extends": "stylelint-config-runroom"
 }
+
 ```
 
 If you've globally installed `stylelint-config-standard` using the `-g` flag, then you'll need to use the absolute path to `stylelint-config-standard` in your config e.g.
 
 ```json
 {
-  "extends": "/absolute/path/to/stylelint-config-runroom"
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "extends": "/absolute/path/to/stylelint-config-runroom"
 }
+
 ```
 
 In this link you will find more information about (extending stylelint)[http://stylelint.io/user-guide/configuration/#extends]
