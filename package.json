@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stylelint/stylelint-config-standard.git"
+    "url": "https://github.com/italodr/stylelint-config-runroom.git"
   },
   "main": "index.js",
   "files": [
