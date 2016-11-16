@@ -29,7 +29,7 @@
     "stylelint": "^7.2.0"
   },
   "dependencies": {
-    "stylelint-config-standard": "14.0.0",
+    "stylelint-config-standard": "14.0.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
