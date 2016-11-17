@@ -1,3 +1,8 @@
+# 1.1.1
+
+-   Fix issues linting markdown
+-   Fix lint errors in js files
+
 # 1.1.0
 
 -   Remove old dependencies

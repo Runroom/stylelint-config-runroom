@@ -2,7 +2,7 @@
 
 > Runroom config for stylelint.
 
-It extends the (Stylelint config standard)[https://github.com/stylelint/stylelint-config-standard].
+It extends the [Stylelint config standard](https://github.com/stylelint/stylelint-config-standard).
 
 ## Example
 
@@ -102,7 +102,7 @@ Set your `stylelint` config to:
 
 ```
 
-In this link you will find more information about (extending stylelint)[http://stylelint.io/user-guide/configuration/#extends]
+In this link you will find more information about [extending stylelint](http://stylelint.io/user-guide/configuration/#extends)
 
 ## [Changelog](CHANGELOG.md)
 
