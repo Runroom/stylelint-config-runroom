@@ -12,13 +12,13 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return']
+        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return', 'include']
       }
     ],
     'block-closing-brace-newline-after': [
       'always',
       {
-        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return']
+        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return', 'include']
       }
     ],
     'color-hex-case': ['lower', { severity: 'warning' }],
