@@ -5,7 +5,7 @@ module.exports = {
     'at-rule-empty-line-before': [
       'always',
       {
-        except: ['blockless-group', 'first-nested'],
+        except: ['inside-block', 'blockless-after-blockless', 'first-nested'],
         ignore: ['after-comment']
       }
     ],

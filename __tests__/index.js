@@ -1,8 +1,8 @@
-import config from "../"
-import stylelint from "stylelint"
-import test from "ava"
+import config from '../';
+import stylelint from 'stylelint';
+import test from 'ava';
 
-const validCss = (`@import url(x.css);
+const validCss = `@import url(x.css);
 @import url(y.css);
 
 /**
@@ -34,7 +34,6 @@ const validCss = (`@import url(x.css);
 .selector-z { width: 30%; }
 
 /* Single-line comment */
-
 @media (min-width: 60em) {
     .selector {
         /* Flush to parent comment */
@@ -66,36 +65,38 @@ const validCss = (`@import url(x.css);
         content: '→';
     }
 }
-`)
+`;
 
-const invalidCss = (`a {
+const invalidCss = `a {
     background: #000000;
 }
-`)
+`;
 
-test("no warnings with valid css", t => {
-  return stylelint.lint({
-    code: validCss,
-    config: config,
-  })
-  .then(data => {
-    const { errored, results } = data
-    const { warnings } = results[0]
-    t.falsy(errored, "no errored")
-    t.is(warnings.length, 0, "flags no warnings")
-  })
-})
+test('no warnings with valid css', t => {
+  return stylelint
+    .lint({
+      code: validCss,
+      config: config
+    })
+    .then(data => {
+      const { errored, results } = data;
+      const { warnings } = results[0];
+      t.falsy(errored, 'no errored');
+      t.is(warnings.length, 0, 'flags no warnings');
+    });
+});
 
-test("a warning with invalid css", t => {
-  return stylelint.lint({
-    code: invalidCss,
-    config: config,
-  })
-  .then(data => {
-    const { errored, results } = data
-    const { warnings } = results[0]
-    t.truthy(errored, "errored")
-    t.is(warnings.length, 1, "flags one warning")
-    t.is(warnings[0].text, "Expected \"#000000\" to be \"#000\" (color-hex-length)", "correct warning text")
-  })
-})
+test('a warning with invalid css', t => {
+  return stylelint
+    .lint({
+      code: invalidCss,
+      config: config
+    })
+    .then(data => {
+      const { errored, results } = data;
+      const { warnings } = results[0];
+      t.truthy(errored, 'errored');
+      t.is(warnings.length, 1, 'flags one warning');
+      t.is(warnings[0].text, 'Expected "#000000" to be "#000" (color-hex-length)', 'correct warning text');
+    });
+});
