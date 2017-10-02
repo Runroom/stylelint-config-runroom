@@ -82,13 +82,7 @@ It extends the [Stylelint config standard](https://github.com/stylelint/stylelin
 ## Installation
 
 ```bash
-npm install stylelint-config-runroom --save-dev
-```
-
-or the minified way
-
-```bash
-npm i -D stylelint-config-runroom
+yarn add --dev stylelint-config-runroom
 ```
 
 ## Usage
