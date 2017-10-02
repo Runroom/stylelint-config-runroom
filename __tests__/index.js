@@ -5,6 +5,23 @@ import test from 'ava';
 const validCss = `@import url(x.css);
 @import url(y.css);
 
+@function testMe() {
+    $value: $number;
+    @if (type-of($value) == number) {
+        $value: function1($value);
+    }
+    @else {
+        $value: function2($value);
+    }
+    @return $value;
+}
+
+@mixin mixinSample() {
+    @media screen and (min-width: 40rem) {
+        @content;
+    }
+}
+
 /**
 * Multi-line comment
 */
@@ -32,6 +49,10 @@ const validCss = `@import url(x.css);
 .selector-x { width: 10%; }
 .selector-y { width: 20%; }
 .selector-z { width: 30%; }
+
+.scss-selector {
+    @extend .selector-x;
+}
 
 /* Single-line comment */
 @media (min-width: 60em) {

@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "stylelint-config-standard": "17.0.0",
-    "stylelint-order": "0.7.0"
+    "stylelint-order": "0.7.0",
+    "stylelint-scss": "^2.1.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
