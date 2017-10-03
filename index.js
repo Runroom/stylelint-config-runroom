@@ -5,20 +5,46 @@ module.exports = {
     'at-rule-empty-line-before': [
       'always',
       {
-        except: ['inside-block', 'blockless-after-blockless', 'first-nested'],
-        ignore: ['after-comment']
+        except: ['first-nested', 'blockless-after-same-name-blockless'],
+        ignore: ['after-comment', 'inside-block']
       }
     ],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return', 'include']
+        ignoreAtRules: [
+          'extend',
+          'content',
+          'if',
+          'else',
+          'elseif',
+          'each',
+          'for',
+          'error',
+          'mixin',
+          'function',
+          'return',
+          'include'
+        ]
       }
     ],
     'block-closing-brace-newline-after': [
       'always',
       {
-        ignoreAtRules: ['extend', 'content', 'if', 'else', 'mixin', 'function', 'return', 'include']
+        ignoreAtRules: [
+          'extend',
+          'content',
+          'if',
+          'else',
+          'elseif',
+          'each',
+          'for',
+          'error',
+          'mixin',
+          'function',
+          'return',
+          'include'
+        ]
       }
     ],
     'color-hex-case': ['lower', { severity: 'warning' }],

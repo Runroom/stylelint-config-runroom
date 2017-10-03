@@ -5,6 +5,18 @@ import test from 'ava';
 const validCss = `@import url(x.css);
 @import url(y.css);
 
+@function breakpoint-generator($type, $size1, $size2: '', $orientation: '') {
+    @if $orientation != '' {
+        $orientation: " and (orientation: #{$orientation})";
+    }
+
+    $mq: '';
+
+    @if $type == 'min' {
+        $mq: "and (min-width: #{nth($size1, 1)})";
+    }
+}
+
 @function testMe() {
     $value: $number;
     @if (type-of($value) == number) {
