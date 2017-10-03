@@ -5,6 +5,19 @@ import test from 'ava';
 const validCss = `@import url(x.css);
 @import url(y.css);
 
+@each $val in $breakpoints {
+    $namespace: nth($val, 1);
+    $breakpoint: nth($val, 2);
+
+    @include breakpoint($breakpoint) {
+        .foo { color: rebeccapurple; }
+    }
+
+    @for $i from 1 through $grid-columns {
+        .foo { color: peru; }
+    }
+}
+
 @function breakpoint-generator($type, $size1, $size2: '', $orientation: '') {
     @if $orientation != '' {
         $orientation: " and (orientation: #{$orientation})";
@@ -22,7 +35,7 @@ const validCss = `@import url(x.css);
     @if (type-of($value) == number) {
         $value: function1($value);
     }
-    @else {
+    @else if (1 == 1) {
         $value: function2($value);
     }
     @return $value;
