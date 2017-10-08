@@ -1,8 +1,8 @@
 # stylelint-config-runroom
 
-> Runroom config for stylelint.
+Runroom config for stylelint, it is an extension of [Stylelint config standard](https://github.com/stylelint/stylelint-config-standard).
 
-It extends the [Stylelint config standard](https://github.com/stylelint/stylelint-config-standard).
+[![Build Status](https://travis-ci.org/italodr/stylelint-config-runroom.svg?branch=master)](https://travis-ci.org/italodr/stylelint-config-runroom)
 
 ## Example
 
