@@ -118,7 +118,7 @@ const invalidCss = `a {
 }
 `;
 
-test('no warnings with valid css', t => {
+test('should not warn on valid css', t => {
   return stylelint
     .lint({
       code: validCss,
@@ -132,7 +132,7 @@ test('no warnings with valid css', t => {
     });
 });
 
-test('a warning with invalid css', t => {
+test('should warn on invalid css', t => {
   return stylelint
     .lint({
       code: invalidCss,
@@ -143,6 +143,10 @@ test('a warning with invalid css', t => {
       const { warnings } = results[0];
       t.truthy(errored, 'errored');
       t.is(warnings.length, 1, 'flags one warning');
-      t.is(warnings[0].text, 'Expected "#000000" to be "#000" (color-hex-length)', 'correct warning text');
+      t.is(
+        warnings[0].text,
+        'Expected "#000000" to be "#000" (color-hex-length)',
+        'correct warning text'
+      );
     });
 });
