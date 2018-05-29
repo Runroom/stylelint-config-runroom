@@ -1,59 +1,46 @@
 {
-    "name": "stylelint-config-runroom",
-    "version": "1.1.7",
-    "description": "Runroom config for stylelint",
-    "keywords": [
-        "stylelint",
-        "stylelint-config",
-        "runroom"
-    ],
-    "author": "Runroom",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/italodr/stylelint-config-runroom.git"
-    },
-    "main": "index.js",
-    "files": [
-        "index.js"
-    ],
-    "devDependencies": {
-        "ava": "0.25.0",
-        "babel-preset-env": "1.6.1",
-        "eslint": "4.18.1",
-        "eslint-config-stylelint": "8.1.0",
-        "npm-check-updates": "^2.14.1",
-        "npm-run-all": "4.1.2",
-        "npmpub": "3.1.0",
-        "remark-cli": "5.0.0",
-        "remark-preset-lint-consistent": "2.0.1",
-        "remark-preset-lint-recommended": "3.0.1",
-        "stylelint": "9.1.1"
-    },
-    "dependencies": {
-        "stylelint-config-standard": "18.1.0",
-        "stylelint-order": "0.8.1",
-        "stylelint-scss": "^2.1.0"
-    },
-    "scripts": {
-        "updevs": "ncu",
-        "ava": "ava --verbose \"__tests__/**/*.js\"",
-        "test": "npm run ava"
-    },
-    "babel": {
-        "presets": [
-            "env"
-        ]
-    },
-    "eslintConfig": {
-        "extends": [
-            "stylelint"
-        ]
-    },
-    "remarkConfig": {
-        "presets": [
-            "lint-recommended",
-            "lint-consistent"
-        ]
-    }
+  "name": "stylelint-config-runroom",
+  "version": "1.1.7",
+  "description": "Runroom config for stylelint",
+  "keywords": ["stylelint", "stylelint-config", "runroom"],
+  "author": "Runroom",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/italodr/stylelint-config-runroom.git"
+  },
+  "main": "index.js",
+  "files": ["index.js"],
+  "devDependencies": {
+    "ava": "0.25.0",
+    "babel-preset-env": "1.7.0",
+    "eslint": "4.19.1",
+    "eslint-config-stylelint": "8.1.0",
+    "npm-check-updates": "2.14.2",
+    "npm-run-all": "4.1.3",
+    "npmpub": "3.1.0",
+    "remark-cli": "5.0.0",
+    "remark-preset-lint-consistent": "2.0.1",
+    "remark-preset-lint-recommended": "3.0.1",
+    "stylelint": "9.2.1"
+  },
+  "dependencies": {
+    "stylelint-config-standard": "18.2.0",
+    "stylelint-order": "0.8.1",
+    "stylelint-scss": "3.1.0"
+  },
+  "scripts": {
+    "updeps": "ncu",
+    "ava": "ava --verbose \"__tests__/**/*.js\"",
+    "test": "npm run ava"
+  },
+  "babel": {
+    "presets": ["env"]
+  },
+  "eslintConfig": {
+    "extends": ["stylelint"]
+  },
+  "remarkConfig": {
+    "presets": ["lint-recommended", "lint-consistent"]
+  }
 }
