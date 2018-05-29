@@ -77,6 +77,8 @@ const validCss = `@import url(x.css);
 
 .scss-selector {
     @extend .selector-x;
+
+    background: peru;
 }
 
 /* Single-line comment */
