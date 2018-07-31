@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config-runroom",
+  "name": "@runroom/stylelint-config-runroom",
   "version": "1.1.8",
   "description": "Runroom config for stylelint",
   "keywords": [
@@ -7,33 +7,35 @@
     "stylelint-config",
     "runroom"
   ],
-  "author": "Runroom",
+  "author": {
+    "name": "Runroom",
+    "url": "https://runroom.es"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/italodr/stylelint-config-runroom.git"
+    "url": "git://github.com/Runroom/stylelint-config-runroom.git"
   },
   "main": "index.js",
   "files": [
     "index.js"
   ],
-  "devDependencies": {
-    "ava": "0.25.0",
-    "babel-preset-env": "1.7.0",
-    "eslint": "4.19.1",
-    "eslint-config-stylelint": "8.1.0",
-    "npm-check-updates": "2.14.2",
-    "npm-run-all": "4.1.3",
-    "npmpub": "3.1.0",
-    "remark-cli": "5.0.0",
-    "remark-preset-lint-consistent": "2.0.1",
-    "remark-preset-lint-recommended": "3.0.1",
-    "stylelint": "9.2.1"
-  },
   "dependencies": {
+    "stylelint": "9.4.0",
     "stylelint-config-standard": "18.2.0",
     "stylelint-order": "0.8.1",
-    "stylelint-scss": "3.1.0"
+    "stylelint-scss": "3.2.0"
+  },
+  "devDependencies": {
+    "@runroom/eslint-config-runroom": "^0.0.2",
+    "ava": "0.25.0",
+    "babel-preset-env": "1.7.0",
+    "npm-check-updates": "2.14.2",
+    "npm-run-all": "4.1.3",
+    "npmpub": "4.1.0",
+    "remark-cli": "5.0.0",
+    "remark-preset-lint-consistent": "2.0.2",
+    "remark-preset-lint-recommended": "3.0.2"
   },
   "scripts": {
     "updeps": "ncu",

@@ -1,0 +1,3 @@
+{
+  "extends": "@runroom/eslint-config-runroom"
+}
