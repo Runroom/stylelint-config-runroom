@@ -1,6 +1,6 @@
-import config from '../';
-import stylelint from 'stylelint';
 import test from 'ava';
+import stylelint from 'stylelint';
+import config from '..';
 
 const validCss = `@import url(x.css);
 @import url(y.css);
@@ -120,35 +120,27 @@ const invalidCss = `a {
 }
 `;
 
-test('should not warn on valid css', t => {
-  return stylelint
-    .lint({
-      code: validCss,
-      config: config
-    })
-    .then(data => {
-      const { errored, results } = data;
-      const { warnings } = results[0];
-      t.falsy(errored, 'no errored');
-      t.is(warnings.length, 0, 'flags no warnings');
-    });
-});
+test('should not warn on valid css', t => stylelint
+  .lint({
+    code: validCss,
+    config
+  })
+  .then(data => {
+    const { errored, results } = data;
+    const { warnings } = results[0];
+    t.falsy(errored, 'no errored');
+    t.is(warnings.length, 0, 'flags no warnings');
+  }));
 
-test('should warn on invalid css', t => {
-  return stylelint
-    .lint({
-      code: invalidCss,
-      config: config
-    })
-    .then(data => {
-      const { errored, results } = data;
-      const { warnings } = results[0];
-      t.truthy(errored, 'errored');
-      t.is(warnings.length, 1, 'flags one warning');
-      t.is(
-        warnings[0].text,
-        'Expected "#000000" to be "#000" (color-hex-length)',
-        'correct warning text'
-      );
-    });
-});
+test('should warn on invalid css', t => stylelint
+  .lint({
+    code: invalidCss,
+    config
+  })
+  .then(data => {
+    const { errored, results } = data;
+    const { warnings } = results[0];
+    t.truthy(errored, 'errored');
+    t.is(warnings.length, 1, 'flags one warning');
+    t.is(warnings[0].text, 'Expected "#000000" to be "#000" (color-hex-length)', 'correct warning text');
+  }));
