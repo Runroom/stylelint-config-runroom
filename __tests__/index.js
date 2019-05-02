@@ -47,6 +47,29 @@ const validCss = `@import url(x.css);
     }
 }
 
+ul { list-style: disc; }
+ul ul { list-style: circle; }
+ul ul ul { list-style: square; }
+
+ol { list-style: decimal; }
+ol ol { list-style: upper-alpha; }
+ol ol ol { list-style: lower-roman; }
+
+ul, ol {
+    display: block;
+
+    ul, ol {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin: 0 0 10px 10px;
+
+        &:last-child { margin-bottom: 0; }
+    }
+}
+
 /**
 * Multi-line comment
 */

@@ -33,6 +33,7 @@ module.exports = {
     'indentation': 4,
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-alphabetical-order': true,
+    'no-descending-specificity': null,
     'number-leading-zero': 'never',
     'selector-list-comma-newline-after': null,
     'scss/at-rule-no-unknown': true,
