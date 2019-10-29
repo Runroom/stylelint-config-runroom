@@ -30,7 +30,7 @@ module.exports = {
       }
     ],
     'color-hex-case': ['lower', { severity: 'warning' }],
-    'indentation': 4,
+    indentation: 4,
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-alphabetical-order': true,
     'no-descending-specificity': null,
